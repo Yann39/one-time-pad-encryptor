@@ -1,6 +1,6 @@
 ## General
 
-This is a simple GUI application to demonstrate the use of the **One-time pad** encryption technique for
+This is a simple GUI application (in french) to demonstrate the use of the **One-time pad** encryption technique for
 encrypting / decrypting data (text and files).
 
 Application has been built on **November 2008** using **Netbeans IDE 6.5**.
@@ -9,7 +9,7 @@ It uses the **Swing Application Framework** and was compiled with **Java 6**.
 
 ## Usage
 
-Just run the provided `.jar` file :
+Run the provided `.jar` file :
 
 ```bash
 java -jar "dist/ProjetCrypto.jar"
@@ -79,14 +79,14 @@ Application architecture :
 
 ![Application architecture schema](doc/architecture.png?raw=true "Architecture")
 
-All interesting stuff is located in file `ProjetCryptoView.java` (yes I don't used any MVC pattern at that time!)
+All interesting stuff is located in file `ProjetCryptoView.java` (yes I don't used any **MVC** pattern at that time!)
 
 ## Performances test
 
 Here are some tests about file encryption (text, image, sound, video) under different computers (1,2 and 4 cores) to evaluate the performances :
 
 1. Computer 1 (laptop) :
-   - AMD Athlon M 2600+@2,0ghz
+   - AMD Athlon M 2600+\@2,0ghz
    - 1 x 256Mo PC2700@133mhz
    - 30Go IDE 5400tr/min 2Mo
 2. Computer 2 :
@@ -99,15 +99,15 @@ Here are some tests about file encryption (text, image, sound, video) under diff
    - 2 x Maxtor SATAII 500Go 7200tr/min 32Mo raid1
 
 Files :
-- Name : `test1.txt`, Type : `texte txt`, Size : `790 bytes`
+- Name : `test1.txt`, Type : `text txt`, Size : `790 bytes`
 - Name : `test2.jpg`, Type : `image jpg`, Size : `46 467 bytes`
 - Name : `test3.mp3`, Type : `sound mp3`, Size : `3 637 961 bytes`
 - Name : `test4.avi`, Type : `video avi`, Size : `310 971 920 bytes`
 
 Computer 1 :
 
-File | LFSR n°1 1024 | LFSR n°1 2048 | LFSR n°1 4096 | LFSR n°2 1024 | LFSR n°2 2048 | LFSR n°2 4096
----- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+File | LFSR n°1 1024 bytes | LFSR n°1 2048 bytes | LFSR n°1 4096 bytes | LFSR n°2 1024 bytes | LFSR n°2 2048 bytes | LFSR n°2 4096 bytes
+---- | --- | --- | --- | --- | --- | ---
 test1.txt (790 o) | 00:00:00:080 | 00:00:00:040 | 00:00:00:020 | 00:00:00:010 | 00:00:00:020 | 00:00:00:020
 test2.jpg (46,47 Ko) | 00:00:00:231 | 00:00:00:180 | 00:00:00:341 | 00:00:00:421 | 00:00:00:430 | 00:00:00:431
 test3.mp3 (3,64 Mo) | 00:00:06:099 | 00:00:07:370 | 00:00:08:562 | 00:00:10:435 | 00:00:12:938 | 00:00:16:053
@@ -115,8 +115,8 @@ test4.avi (310,97 Mo) | 00:10:50:726 | 00:12:28:306 | 00:14:03:764 | 00:16:51:62
 
 Computer 2 :
 
-File | LFSR n°1 1024 | LFSR n°1 2048 | LFSR n°1 4096 | LFSR n°2 1024 | LFSR n°2 2048 | LFSR n°2 4096
----- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+File | LFSR n°1 1024 bytes | LFSR n°1 2048 bytes | LFSR n°1 4096 bytes | LFSR n°2 1024 bytes | LFSR n°2 2048 bytes | LFSR n°2 4096 bytes
+---- | --- | --- | --- | --- | --- | ---
 test1.txt (790 o) | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000
 test2.jpg (46,47 Ko) | 00:00:00:032 | 00:00:00:050 | 00:00:00:062 | 00:00:00:063 | 00:00:00:062 | 00:00:00:078
 test3.mp3 (3,64 Mo) | 00:00:01:375 | 00:00:01:782 | 00:00:02:078 | 00:00:02:344 | 00:00:02:938 | 00:00:03:640
@@ -124,8 +124,8 @@ test4.avi (310,97 Mo) | 00:02:15:875 | 00:02:36:265 | 00:02:58:688 | 00:03:33:53
 
 Computer 3 :
 
-File | LFSR n°1 1024 | LFSR n°1 2048 | LFSR n°1 4096 | LFSR n°2 1024 | LFSR n°2 2048 | LFSR n°2 4096
----- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+File | LFSR n°1 1024 bytes | LFSR n°1 2048 bytes | LFSR n°1 4096 bytes | LFSR n°2 1024 bytes | LFSR n°2 2048 bytes | LFSR n°2 4096 bytes
+---- | --- | --- | --- | --- | --- | ---
 test1.txt (790 o) | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000
 test2.jpg (46,47 Ko) | 00:00:00:016 | 00:00:00:062 | 00:00:00:078 | 00:00:00:047 | 00:00:00:063 | 00:00:00:109
 test3.mp3 (3,64 Mo) | 00:00:01:563 | 00:00:02:062 | 00:00:02:735 | 00:00:02:859 | 00:00:03:906 | 00:00:04:828
