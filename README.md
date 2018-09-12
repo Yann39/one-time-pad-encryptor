@@ -12,7 +12,7 @@ It uses the **Swing Application Framework** and was compiled with **Java 6**.
 Just run the provided `.jar` file :
 
 ```bash
-java -jar "dist/ProjetLangageFormel.jar"
+java -jar "dist/ProjetCrypto.jar"
 ```
 
 Then just use the UI :
