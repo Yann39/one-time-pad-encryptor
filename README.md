@@ -106,7 +106,7 @@ Files :
 
 Computer 1 :
 
-File | LFSR n°1 1024 bytes | LFSR n°1 2048 bytes | LFSR n°1 4096 bytes | LFSR n°2 1024 bytes | LFSR n°2 2048 bytes | LFSR n°2 4096 bytes
+File | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes
 ---- | --- | --- | --- | --- | --- | ---
 test1.txt (790 o) | 00:00:00:080 | 00:00:00:040 | 00:00:00:020 | 00:00:00:010 | 00:00:00:020 | 00:00:00:020
 test2.jpg (46,47 Ko) | 00:00:00:231 | 00:00:00:180 | 00:00:00:341 | 00:00:00:421 | 00:00:00:430 | 00:00:00:431
@@ -115,7 +115,7 @@ test4.avi (310,97 Mo) | 00:10:50:726 | 00:12:28:306 | 00:14:03:764 | 00:16:51:62
 
 Computer 2 :
 
-File | LFSR n°1 1024 bytes | LFSR n°1 2048 bytes | LFSR n°1 4096 bytes | LFSR n°2 1024 bytes | LFSR n°2 2048 bytes | LFSR n°2 4096 bytes
+File | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes
 ---- | --- | --- | --- | --- | --- | ---
 test1.txt (790 o) | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000
 test2.jpg (46,47 Ko) | 00:00:00:032 | 00:00:00:050 | 00:00:00:062 | 00:00:00:063 | 00:00:00:062 | 00:00:00:078
@@ -124,7 +124,7 @@ test4.avi (310,97 Mo) | 00:02:15:875 | 00:02:36:265 | 00:02:58:688 | 00:03:33:53
 
 Computer 3 :
 
-File | LFSR n°1 1024 bytes | LFSR n°1 2048 bytes | LFSR n°1 4096 bytes | LFSR n°2 1024 bytes | LFSR n°2 2048 bytes | LFSR n°2 4096 bytes
+File | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes
 ---- | --- | --- | --- | --- | --- | ---
 test1.txt (790 o) | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000
 test2.jpg (46,47 Ko) | 00:00:00:016 | 00:00:00:062 | 00:00:00:078 | 00:00:00:047 | 00:00:00:063 | 00:00:00:109
@@ -134,3 +134,5 @@ test4.avi (310,97 Mo) | 00:02:38:112 | 00:02:59:754 | 00:03:38:968 | 00:04:08:62
 ## Licence
 
 WTFPL license : http://www.wtfpl.net/
+
+But a mention is always appreciated :)
