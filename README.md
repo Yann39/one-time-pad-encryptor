@@ -1,13 +1,34 @@
-## General
+# One-time pad encryption
 
-This is a simple GUI application (in french) to demonstrate the use of the **One-time pad** encryption technique for
+Basic **Java Swing** application to demonstrate **one-time pad** encryption.
+
+![Version](https://img.shields.io/badge/Version-1.0.0-2AAB92.svg)
+![Static Badge](https://img.shields.io/badge/Last%20update-12%20Nov%202008-blue)
+![Version](https://img.shields.io/badge/Java-6-red.svg)
+
+---
+
+# Table of Contents
+
+* [About the project](#about-the-project)
+* [Usage](#usage)
+* [Technical details](#technical-details)
+* [Architecture](#architecture)
+* [Performances test](#performances-test)
+* [License](#license)
+
+# About the project
+
+<img alt="Java logo" src="logo-java.svg" height="92"/>
+
+This is a simple GUI application (in French) to demonstrate the use of the **One-time pad** encryption technique for
 encrypting / decrypting data (text and files).
 
 Application has been built on **November 2008** using **Netbeans IDE 6.5**.
 
 It uses the **Swing Application Framework** and was compiled with **Java 6**.
 
-## Usage
+# Usage
 
 Run the provided `.jar` file :
 
@@ -33,7 +54,7 @@ When dealing with files, I use the following naming convention :
 - key file : cle\__filename_.ext
 - decrypted file : decrypte\__filename_.ext
 
-## Technical details
+# Technical details
 
 Security is done by using a **Verman** type scheme with a **Linear Feadback Shift Register** (LFSR) based on a **pseudo-random generator**.
 
@@ -73,7 +94,7 @@ Here is a picture representing the secret bit generation for the **128 bits LFSR
 
 ![Secret bit generation picture](doc/secret_bit_generation.png?raw=true "Secret bit generation")
 
-## Architecture
+# Architecture
 
 Application architecture :
 
@@ -81,7 +102,7 @@ Application architecture :
 
 All interesting stuff is located in file `ProjetCryptoView.java` (yes I don't used any **MVC** pattern at that time!)
 
-## Performances test
+# Performances test
 
 Here are some tests about file encryption (text, image, sound, video) under different computers (1,2 and 4 cores) to evaluate the performances :
 
@@ -92,11 +113,11 @@ Here are some tests about file encryption (text, image, sound, video) under diff
 2. Computer 2 :
    - Intel Core 2 duo E6700@3,3ghz
    - Corsair 2 x 1Go PC6400PRO@413mhz 4-4-4-12
-   - 2 x Maxtor SATAII 160Go 7200tr/min 8Mo raid0
+   - 2 x Maxtor SATA II 160Go 7200tr/min 8Mo raid0
 3. Computer 3 :
    - Intel Quad Core Q6600@2,9ghz
    - Corsair 2 x 1Go PC6400C4@406mhz 5-5-5-18
-   - 2 x Maxtor SATAII 500Go 7200tr/min 32Mo raid1
+   - 2 x Maxtor SATA II 500Go 7200tr/min 32Mo raid1
 
 Files :
 - Name : `test1.txt`, Type : `text txt`, Size : `790 bytes`
@@ -106,33 +127,42 @@ Files :
 
 Computer 1 :
 
-File | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes
----- | --- | --- | --- | --- | --- | ---
-test1.txt (790 o) | 00:00:00:080 | 00:00:00:040 | 00:00:00:020 | 00:00:00:010 | 00:00:00:020 | 00:00:00:020
-test2.jpg (46,47 Ko) | 00:00:00:231 | 00:00:00:180 | 00:00:00:341 | 00:00:00:421 | 00:00:00:430 | 00:00:00:431
-test3.mp3 (3,64 Mo) | 00:00:06:099 | 00:00:07:370 | 00:00:08:562 | 00:00:10:435 | 00:00:12:938 | 00:00:16:053
-test4.avi (310,97 Mo) | 00:10:50:726 | 00:12:28:306 | 00:14:03:764 | 00:16:51:624 | 00:24:21:078 | 00:29:52:878
+| File                  | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes |
+|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| test1.txt (790 o)     | 00:00:00:080          | 00:00:00:040          | 00:00:00:020          | 00:00:00:010          | 00:00:00:020          | 00:00:00:020          |
+| test2.jpg (46,47 Ko)  | 00:00:00:231          | 00:00:00:180          | 00:00:00:341          | 00:00:00:421          | 00:00:00:430          | 00:00:00:431          |
+| test3.mp3 (3,64 Mo)   | 00:00:06:099          | 00:00:07:370          | 00:00:08:562          | 00:00:10:435          | 00:00:12:938          | 00:00:16:053          |
+| test4.avi (310,97 Mo) | 00:10:50:726          | 00:12:28:306          | 00:14:03:764          | 00:16:51:624          | 00:24:21:078          | 00:29:52:878          |
 
 Computer 2 :
 
-File | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes
----- | --- | --- | --- | --- | --- | ---
-test1.txt (790 o) | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000
-test2.jpg (46,47 Ko) | 00:00:00:032 | 00:00:00:050 | 00:00:00:062 | 00:00:00:063 | 00:00:00:062 | 00:00:00:078
-test3.mp3 (3,64 Mo) | 00:00:01:375 | 00:00:01:782 | 00:00:02:078 | 00:00:02:344 | 00:00:02:938 | 00:00:03:640
-test4.avi (310,97 Mo) | 00:02:15:875 | 00:02:36:265 | 00:02:58:688 | 00:03:33:532 | 00:04:28:391 | 00:05:57:500
+| File                  | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes |
+|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| test1.txt (790 o)     | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          |
+| test2.jpg (46,47 Ko)  | 00:00:00:032          | 00:00:00:050          | 00:00:00:062          | 00:00:00:063          | 00:00:00:062          | 00:00:00:078          |
+| test3.mp3 (3,64 Mo)   | 00:00:01:375          | 00:00:01:782          | 00:00:02:078          | 00:00:02:344          | 00:00:02:938          | 00:00:03:640          |
+| test4.avi (310,97 Mo) | 00:02:15:875          | 00:02:36:265          | 00:02:58:688          | 00:03:33:532          | 00:04:28:391          | 00:05:57:500          |
 
 Computer 3 :
 
-File | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes
----- | --- | --- | --- | --- | --- | ---
-test1.txt (790 o) | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000 | 00:00:00:000
-test2.jpg (46,47 Ko) | 00:00:00:016 | 00:00:00:062 | 00:00:00:078 | 00:00:00:047 | 00:00:00:063 | 00:00:00:109
-test3.mp3 (3,64 Mo) | 00:00:01:563 | 00:00:02:062 | 00:00:02:735 | 00:00:02:859 | 00:00:03:906 | 00:00:04:828
-test4.avi (310,97 Mo) | 00:02:38:112 | 00:02:59:754 | 00:03:38:968 | 00:04:08:622 | 00:05:10:354 | 00:06:58:720
+| File                  | LFSR n°1 - 1024 bytes | LFSR n°1 - 2048 bytes | LFSR n°1 - 4096 bytes | LFSR n°2 - 1024 bytes | LFSR n°2 - 2048 bytes | LFSR n°2 - 4096 bytes |
+|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| test1.txt (790 o)     | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          | 00:00:00:000          |
+| test2.jpg (46,47 Ko)  | 00:00:00:016          | 00:00:00:062          | 00:00:00:078          | 00:00:00:047          | 00:00:00:063          | 00:00:00:109          |
+| test3.mp3 (3,64 Mo)   | 00:00:01:563          | 00:00:02:062          | 00:00:02:735          | 00:00:02:859          | 00:00:03:906          | 00:00:04:828          |
+| test4.avi (310,97 Mo) | 00:02:38:112          | 00:02:59:754          | 00:03:38:968          | 00:04:08:622          | 00:05:10:354          | 00:06:58:720          |
 
-## Licence
+# License
 
-WTFPL license : http://www.wtfpl.net/
+[General Public License (GPL) v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-But a mention is always appreciated :)
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not,
+see <http://www.gnu.org/licenses/>.
