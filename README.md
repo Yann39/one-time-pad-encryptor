@@ -43,12 +43,14 @@ Then just use the UI :
 ![Details interface picture](doc/details_interface.png?raw=true "Details interface")
 
 From the `Option` menu, you can configure :
+
 - byte packet size (1024, 2048, 4096) : byte packet size for file processing
 - random or fixed seed (alternated 0 and 1)
 - write seed or not : if yes, seed will be written in the mask before generating next bits
 - LFSR (see technical details below)
 
 When dealing with files, I use the following naming convention :
+
 - original file : _filename_.ext
 - encrypted file : crypte\__filename_.ext
 - key file : cle\__filename_.ext
@@ -81,7 +83,7 @@ Following **LFSR** have been implemented :
    ```
 
    Short secret key (the seed) is constituted of `X0, X1, ..., X127` values (128 bits)
-   
+
 Thus, a sequence of bits of the same length as the message to be encrypted will be generated.
 And as the data is in binary form, the method is reduced to a particularly simple calculation and very effective in practice.
 The message to be encrypted is presented as a sequence of bits, and the key is another sequence of bits, of the same length.
@@ -107,19 +109,20 @@ All interesting stuff is located in file `ProjetCryptoView.java` (yes I don't us
 Here are some tests about file encryption (text, image, sound, video) under different computers (1,2 and 4 cores) to evaluate the performances :
 
 1. Computer 1 (laptop) :
-   - AMD Athlon M 2600+\@2,0ghz
-   - 1 x 256Mo PC2700@133mhz
-   - 30Go IDE 5400tr/min 2Mo
+    - AMD Athlon M 2600+\@2,0ghz
+    - 1 x 256Mo PC2700@133mhz
+    - 30Go IDE 5400tr/min 2Mo
 2. Computer 2 :
-   - Intel Core 2 duo E6700@3,3ghz
-   - Corsair 2 x 1Go PC6400PRO@413mhz 4-4-4-12
-   - 2 x Maxtor SATA II 160Go 7200tr/min 8Mo raid0
+    - Intel Core 2 duo E6700@3,3ghz
+    - Corsair 2 x 1Go PC6400PRO@413mhz 4-4-4-12
+    - 2 x Maxtor SATA II 160Go 7200tr/min 8Mo raid0
 3. Computer 3 :
-   - Intel Quad Core Q6600@2,9ghz
-   - Corsair 2 x 1Go PC6400C4@406mhz 5-5-5-18
-   - 2 x Maxtor SATA II 500Go 7200tr/min 32Mo raid1
+    - Intel Quad Core Q6600@2,9ghz
+    - Corsair 2 x 1Go PC6400C4@406mhz 5-5-5-18
+    - 2 x Maxtor SATA II 500Go 7200tr/min 32Mo raid1
 
 Files :
+
 - Name : `test1.txt`, Type : `text txt`, Size : `790 bytes`
 - Name : `test2.jpg`, Type : `image jpg`, Size : `46 467 bytes`
 - Name : `test3.mp3`, Type : `sound mp3`, Size : `3 637 961 bytes`
