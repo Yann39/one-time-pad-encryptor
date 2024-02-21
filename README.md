@@ -19,7 +19,7 @@ Basic **Java Swing** application to demonstrate **one-time pad** encryption.
 
 # About the project
 
-<img alt="Java logo" src="logo-java.svg" height="92"/>
+<img alt="Java logo" src="doc/logo-java.svg" height="92"/>
 
 This is a simple GUI application (in French) to demonstrate the use of the **One-time pad** encryption technique for
 encrypting / decrypting data (text and files).
